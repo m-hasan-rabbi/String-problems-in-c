@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{
+   char str[100],str1[100];
+   printf("enter a input : ");
+   gets(str);
+   int i=0,k=0;
+   while(str[i] != '\0')
+   {
+       if((str[i] != 'a') && (str[i] != 'e') && (str[i] != 'i') && (str[i] != 'o') && (str[i] != 'u')  )
+       {
+           str1[k]=str[i];
+           k++;
+       }
+       i++;
+   }
+  str1[k]='\0';
+  puts(str1);
+  return 0;
+
+}

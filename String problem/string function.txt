@@ -1,0 +1,82 @@
+#include<stdio.h>
+int main()
+{
+    char str[100],s[100];
+    int count=0,i,j,k=0,sp=0,vowel=0,con=0,digit=0;
+    printf("Enter a string :");
+    gets(str);
+    puts(str);
+    for(i=0; str[i] != '\0'; i++);
+    printf("length is %d\n",i);
+    i=i-1;
+    for(j=i; j>=0; j--)
+    {
+        s[k]=str[j];
+        k++;
+    }
+    s[k]='\0';
+    printf("Reverse :");
+    puts(s);
+    i=0;
+    while(str[i] != '\0')
+    {
+        if(str[i] == ' ')
+        {
+            sp++;
+        }
+
+        if(str[i]=='a' || str[i]=='A' || str[i]=='e' || str[i]=='E'|| str[i]=='i' || str[i]=='I' || str[i]=='o' || str[i]=='O'|| str[i]=='u' || str[i]=='U')
+        {
+            vowel++;
+        }
+        else
+        {
+            con++;
+        }
+        if(str[i] >='0' && str[i]<= '9')
+        {
+           digit++;
+        }
+         i++;
+    }
+    printf("space %d\n",sp);
+    printf("vowel %d\n",vowel);
+    printf("consonant %d\n",(con-sp)-digit);
+    printf("digit %d\n",digit);
+
+
+
+}
+*********************
+#include<stdio.h>
+int main()
+{
+    char string[100],revstring[100];
+    int i,j,k=0,space=0;
+    gets(string);
+    puts(string);
+    for(i=0; string[i] != '\0' ; i++);
+     printf("length %d\n",i);
+     i=i-1;
+     for(j=i; j>=0; j--)
+     {
+         revstring[k]=string[j];
+         k++;
+     }
+     revstring[k]='\0';
+     puts(revstring);
+
+     i=0;
+     while(string[i] != '\0')
+     {
+         if(string[i] == ' ')
+         {
+             space++;
+         }
+         i++;
+     }
+     printf("space %d\n",space);
+
+
+}
+

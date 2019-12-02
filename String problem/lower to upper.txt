@@ -1,0 +1,31 @@
+int main()
+
+{
+
+
+    char str[1000],str1[100];
+    printf("enter the string 1: \n");
+    gets(str);
+
+    int i=0,count=0,len=0;
+
+
+
+     i=0;
+     while(str[i] != '\0')
+     {
+          if(str[i] >= 'a' && str[i] <= 'z')
+          {
+              str[i]=str[i]-32;
+          }
+          i++;
+     }
+
+     puts(str);
+
+
+    }
+
+
+
+

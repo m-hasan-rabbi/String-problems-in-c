@@ -1,0 +1,79 @@
+#include<stdio.h>
+int main()
+{
+    FILE *file;
+   char str[100];
+   char string[100];
+   char ch;
+    printf("1 for create : \n");
+    printf("2 for update : \n");
+    printf("3 for read : \n");
+    int choice;
+
+    while(1)
+    {
+        scanf("%d",&choice);
+        switch(choice)
+        {
+       case 1:
+           printf("enter file name : \n");
+           fflush(stdin);
+           gets(str);
+         file=fopen(str,"w");
+         if(file== NULL)
+         {
+             printf("file does not exits\n");
+         }
+         else
+         {
+             printf("file opened\n");
+             fclose(file);
+         }
+         break;
+       case 2:
+             printf("enter target file name : \n");
+           fflush(stdin);
+           gets(str);
+         file=fopen(str,"a");
+         if(file== NULL)
+         {
+             printf("file does not exits\n");
+         }
+         else
+         {
+             printf("file opened\n");
+             printf("write something:");
+             gets(string);
+             fflush(stdin);
+             fputs(string,file);
+             fclose(file);
+         }
+         break;
+          case 3:
+             printf("enter target file name : \n");
+           fflush(stdin);
+           gets(str);
+         file=fopen(str,"r");
+         if(file== NULL)
+         {
+             printf("file does not exits\n");
+         }
+         else
+         {
+             printf("file opened\n");
+              while( ! feof(file))
+              {
+
+                  ch=getc(file);
+                  printf("%c",ch);
+              }
+             fclose(file);
+         }
+         break;
+
+
+
+
+        }
+    }
+}
